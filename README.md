@@ -8,11 +8,11 @@ version 5.3.0
 1. Go to project folder and install dependencies:
 
 ```sh
-npm install
+yarn install
 ```
 
 2. Launch development server, and open `localhost:4200` in your browser:
 
 ```sh
-npm start
+yarn start
 ```
