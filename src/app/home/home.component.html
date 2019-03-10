@@ -1,0 +1,86 @@
+<div class="banner-section">
+  <div class="banner-w">
+    <div class="title-w">
+      <h2>Find a plan that works for you.</h2>
+      <a>Personal</a>
+      <a>Business</a>
+    </div>
+  </div>
+</div>
+<div class="card-section">
+  <div class="card-w">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 column" *ngFor="let plan of plans">
+        <div class="card-box">
+          <div class="title-w">
+            {{ plan.type }}
+          </div>
+          <div class="card-image-w">
+            <img src="{{ plan.image }}" class="img-fluid" />
+          </div>
+          <div class="dot">
+            <div [ngClass]="plan.type === 'N26' ? 'white-gradient' : 'black-gradient'"></div>
+          </div>
+          <div class="btn-w">
+            <div class="btn btn-info">Open account</div>
+          </div>
+          <div class="price-box">
+            <div class="header">
+              <div>{{ plan.price }}</div>
+              <span>/month</span>
+            </div>
+            <div class="body">
+              <div class="item">
+                <div class="icon">
+                  <img src="/assets/img/Screenshot_4.png" />
+                </div>
+                <div class="text">
+                  Free ATM withdrawals in euros
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <img src="/assets/img/Screenshot_4.png" />
+                </div>
+                <div class="text">
+                  Free payments in any currency
+                </div>
+              </div>
+              <div [ngClass]="plan.type === 'N26' ? 'disable' : null">
+                <div [ngClass]="plan.type === 'N26' ? 'disable' : null">
+                  <div class="item">
+                    <div class="icon">
+                      <img src="/assets/img/Screenshot_7.png" />
+                    </div>
+                    <div class="text">
+                      Free withdrawals worldwide
+                    </div>
+                  </div>
+                </div>
+                <div [ngClass]="plan.type === 'N26' ? 'disable' : null">
+                  <div class="item">
+                    <div class="icon">
+                      <img src="/assets/img/Screenshot_8.png" />
+                    </div>
+                    <div class="text">
+                      Allianz insurance package
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="desc-w">
+    <p>
+      Services and Fees for everyone who registers with an address in Belgium, Estonia, Finland, Greece, Ireland,
+      Latvia, Lithuania, Luxembourg, Netherlands, Portugal, Slovakia, Slovenia, Sweden, Norway, Denmark, Poland, Iceland
+      and Liechtenstein.
+    </p>
+    <p>Black not available in Greece, Slovenia.</p>
+    <p>For our detailed price list, view PDF here</p>
+  </div>
+</div>
